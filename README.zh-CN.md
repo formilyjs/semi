@@ -55,4 +55,4 @@ This project exists thanks to all the people who contribute.
 ## LICENSE
 
 Formily is open source software licensed as
-[MIT](./LICENSE.md).
+[MIT](./LICENSE).
