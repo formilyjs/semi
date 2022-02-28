@@ -1,0 +1,22 @@
+@import '../__styles__/theme.scss';
+@import '../form-item/index.scss';
+
+.#{$semi-form-prefix} {
+  &-form {
+    &-horizontal {
+      .#{$semi-form-prefix} {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .#{$form-item-cls} {
+        padding-right: $padding-lg;
+      }
+    }
+    &-vertical .#{$form-item-cls} {
+      margin: 0;
+      padding: $padding-sm 0;
+      overflow: hidden;
+    }
+  }
+
+}

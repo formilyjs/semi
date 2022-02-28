@@ -1,0 +1,7 @@
+@import '../__styles__/theme.scss';
+
+$array-collapse-prefix-cls: '#{$semi-form-prefix}-array-collapse';
+
+.#{$array-collapse-prefix-cls}-item {
+  margin-bottom: 10px !important;
+}

@@ -1,0 +1,14 @@
+$button-group-prefix-cls: 'formily-semi-button-group';
+
+.#{$button-group-prefix-cls}-sticky {
+  padding: 10px 0;
+  border-top: 1px solid rgba(239, 239, 239, 1);
+
+  &-inner {
+    display: flex;
+
+    .#{$semi-prefix}-item {
+      flex: 2;
+    }
+  }
+}

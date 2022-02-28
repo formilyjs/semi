@@ -1,0 +1,44 @@
+{
+  "name": "@formily/semi-settings-form",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "lib",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "npm": ">=3.0.0"
+  },
+  "module": "esm",
+  "umd:main": "dist/formily.semi-settings-form.umd.production.js",
+  "unpkg": "dist/formily.semi-settings-form.umd.production.js",
+  "jsdelivr": "dist/formily.semi-settings-form.umd.production.js",
+  "jsnext:main": "esm",
+  "sideEffects": [
+    "dist/*",
+    "esm/*.js",
+    "lib/*.js",
+    "src/*.ts",
+    "*.less",
+    "*.scss",
+    "**/*/style.js"
+  ],
+  "scripts": {
+    "build": "formily-tpl build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formilyjs/semi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/formilyjs/semi/issues"
+  },
+  "homepage": "https://github.com/formilyjs/semi#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0 || >=17.0.0",
+    "react-dom": ">=16.8.0",
+    "react-is": ">=16.8.0 || >=17.0.0"
+  }
+}

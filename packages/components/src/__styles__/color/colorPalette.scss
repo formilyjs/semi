@@ -1,0 +1,24 @@
+/* stylelint-disable no-duplicate-selectors */
+// @import "bezierEasing";
+// @import "tinyColor";
+
+// antd@1.x color palette like
+// https://css-tricks.com/snippets/sass/tint-shade-functions/
+
+@function colorPalette($color, $index) {
+  $isLight: $index <= 6;
+  // $hueStep: 2;
+  // $saturationStep: 0.16;
+  // $saturationStep2: 0.05;
+  // $brightnessStep1: 0.05;
+  // $brightnessStep2: 0.15;
+  // $lightColorCount: 5;
+  // $darkColorCount: 4;
+  
+  @return $color;
+  @if $isLight {
+    @return tint($color, $index / 10);
+  } @else {
+    @return shade($color, $index / 10);
+  }
+}

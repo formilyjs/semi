@@ -1,0 +1,10 @@
+@import '../__styles__/theme.scss';
+
+$form-text-prefix-cls: 'formily-semi-text';
+
+.#{$form-text-prefix-cls} {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  min-height: 30px;
+}

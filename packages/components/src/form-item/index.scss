@@ -1,0 +1,851 @@
+@import '../__styles__/theme.scss';
+$form-item-cls: 'formily-semi-item';
+
+@import './grid.scss';
+@import './animation.scss';
+
+.#{$form-item-cls} {
+  display: flex;
+  margin-bottom: $form-item-margin-bottom - 2;
+  position: relative;
+  font-size: $font-size-base;
+
+  &-label {
+    line-height: $height-base;
+    min-height: $height-base - 2;
+  }
+
+  textarea.#{$semi-prefix}-input {
+    height: auto;
+  }
+
+  // input[type=file]
+  .#{$semi-prefix}-upload {
+    background: transparent;
+  }
+
+  .#{$semi-prefix}-upload.#{$semi-prefix}-upload-drag {
+    background: $background-color-light;
+  }
+
+  // diff with @formily/antd
+  // input[type='radio'],
+  // input[type='checkbox'] {
+  //   width: $font-size-base;
+  //   height: $font-size-base;
+  // }
+
+  // Radios and checkboxes on same line
+  .#{$semi-prefix}-radio-inline,
+  .#{$semi-prefix}-checkbox-inline {
+    display: inline-block;
+    margin-left: 8px;
+    font-weight: normal;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .#{$semi-prefix}-checkbox-vertical,
+  .#{$semi-prefix}-radio-vertical {
+    display: block;
+  }
+
+  .#{$semi-prefix}-checkbox-vertical+.#{$semi-prefix}-checkbox-vertical,
+  .#{$semi-prefix}-radio-vertical+.#{$semi-prefix}-radio-vertical {
+    margin-left: 0;
+  }
+
+  .#{$semi-prefix}-input-number {
+    width: 100%;
+
+    +.#{$semi-prefix}-form-text {
+      margin-left: 8px;
+    }
+
+    &-handler-wrap {
+      z-index: 2; // https://github.com/ant-design/ant-design/issues/6289
+    }
+  }
+
+
+  .#{$semi-prefix}-select,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker {
+    width: 100%;
+  }
+
+  // Don't impact select inside input group
+  .#{$semi-prefix}-input-group .#{$semi-prefix}-select,
+  .#{$semi-prefix}-input-group .#{$semi-prefix}-cascader-picker {
+    width: auto;
+  }
+}
+
+.#{$form-item-cls}-label {
+  position: relative;
+  display: flex;
+
+  &-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-tooltip {
+    cursor: help;
+
+    * {
+      cursor: help;
+    }
+
+    label {
+      border-bottom: 1px dashed currentColor;
+    }
+  }
+}
+
+.#{$form-item-cls}-label label {
+  color: $heading-color;
+}
+
+.#{$form-item-cls}-label-align-left {
+  >.#{$form-item-cls}-label {
+    justify-content: flex-start;
+  }
+}
+
+.#{$form-item-cls}-label-align-right {
+  >.#{$form-item-cls}-label {
+    justify-content: flex-end;
+  }
+}
+
+.#{$form-item-cls}-label-wrap {
+  .#{$form-item-cls}-label {
+
+    label {
+      white-space: pre-line;
+      word-break: break-all;
+    }
+  }
+}
+
+
+.#{$form-item-cls}-feedback-layout-terse {
+  margin-bottom: 8px;
+
+  &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+    margin-bottom: 0;
+  }
+}
+
+
+.#{$form-item-cls}-feedback-layout-loose {
+  margin-bottom: 22px;
+
+  &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+    margin-bottom: 0;
+  }
+}
+
+.#{$form-item-cls}-feedback-layout-none {
+  margin-bottom: 0;
+
+  &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+    margin-bottom: 0;
+  }
+}
+
+.#{$form-item-cls}-control {
+  flex: 1;
+  max-width: 100%;
+
+  .#{$form-item-cls}-control-content {
+    display: flex;
+
+    .#{$form-item-cls}-control-content-component {
+      width: 100%;
+      // min-height: $height-base - 2;
+      // line-height: $height-base + 2;
+
+      &-has-feedback-icon {
+        flex: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .#{$form-item-cls}-addon-before {
+      margin-right: 8px;
+      display: inline-flex;
+      align-items: center;
+      min-height: $height-base;
+      flex-shrink: 0;
+    }
+
+    .#{$form-item-cls}-addon-after {
+      margin-left: 8px;
+      display: inline-flex;
+      align-items: center;
+      min-height: $height-base;
+      flex-shrink: 0;
+    }
+  }
+
+  .#{$form-item-cls}-help,
+  .#{$form-item-cls}-extra {
+    min-height: 22px;
+    line-height: 22px;
+    color: $text-color-secondary;
+  }
+}
+
+.#{$form-item-cls}-size-small {
+  font-size: $font-size-sm;
+
+  line-height: $height-sm;
+
+  .#{$form-item-cls}-label {
+    line-height: $height-sm;
+    min-height: $height-sm - 2;
+  }
+
+  .#{$form-item-cls}-control-content {
+    .#{$form-item-cls}-control-content-component {
+      // min-height: $height-sm - 2;
+      // line-height: $height-sm + 2;
+    }
+  }
+
+  .#{$form-item-cls}-help,
+  .#{$form-item-cls}-extra {
+    min-height: $height-sm - 4;
+    line-height: $height-sm - 4;
+  }
+
+  .#{$form-item-cls}-control-content {
+    min-height: $height-sm - 2;
+  }
+
+  .#{$form-item-cls}-label>label {
+    height: $height-sm - 2;
+  }
+
+
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-picker {
+    padding: 0 11px;
+
+    input {
+      height: $height-sm - 2;
+      font-size: $font-size-sm;
+
+    }
+  }
+
+  // .#{$semi-prefix}-btn {
+  //   height: $height-base;
+  //   padding: 0 7px;
+  //   font-size: $font-size-base;
+  //   border-radius: 2px;
+  // }
+
+  .#{$semi-prefix}-cascader-picker {
+    height: $height-sm - 2;
+
+    input {
+      padding: 0 7px;
+      height: $height-sm - 2;
+      font-size: $font-size-sm;
+    }
+  }
+
+  .#{$semi-prefix}-select-single:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector {
+    padding: 0px 11px;
+    height: $height-sm - 2;
+    font-size: $font-size-sm;
+    line-height: $height-sm;
+
+    .#{$semi-prefix}-select-selection-search {
+      height: $height-sm;
+      line-height: $height-sm - 2;
+
+      &-input {
+        height: $height-sm;
+        line-height: $height-sm - 2;
+      }
+    }
+
+    .#{$semi-prefix}-select-selection-placeholder {
+      line-height: $height-sm - 2;
+      height: $height-sm;
+    }
+
+    .#{$semi-prefix}-select-selection-item {
+      line-height: $height-sm - 2;
+      height: $height-sm;
+    }
+  }
+
+  .#{$semi-prefix}-select-multiple:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector {
+    padding: 0px 2px;
+    height: $height-sm - 2;
+    font-size: $font-size-sm;
+    line-height: $height-sm;
+
+    &::after {
+      height: $height-sm - 8;
+      line-height: $height-sm - 8;
+    }
+
+    .#{$semi-prefix}-select-selection-search {
+      height: $height-sm - 8;
+      line-height: $height-sm - 8;
+      margin-inline-start: 0;
+
+      &-input {
+        height: $height-sm - 12;
+        line-height: $height-sm - 12;
+      }
+    }
+
+    .#{$semi-prefix}-select-selection-placeholder {
+      line-height: $height-sm - 8;
+      height: $height-sm - 8;
+      left: 4px;
+    }
+
+    .#{$semi-prefix}-select-selection-overflow-item {
+      align-self: flex-start;
+    }
+
+    .#{$semi-prefix}-select-selection-item {
+      line-height: $height-sm - 10;
+      height: $height-sm - 8;
+    }
+  }
+
+  &.#{$form-item-cls}-feedback-layout-terse {
+    margin-bottom: 8px;
+
+    &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+      margin-bottom: 0;
+    }
+  }
+
+  &.#{$form-item-cls}-feedback-layout-loose {
+    margin-bottom: $height-sm - 4;
+
+    &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.#{$form-item-cls}-size-large {
+  font-size: $font-size-lg;
+  line-height: $height-lg;
+
+  .#{$form-item-cls}-label {
+    line-height: $height-lg;
+    min-height: $height-lg - 2;
+  }
+
+  .#{$form-item-cls}-control-content {
+    .#{$form-item-cls}-control-content-component {
+      // min-height: $height-lg - 2;
+      // line-height: $height-lg;
+    }
+  }
+
+  .#{$form-item-cls}-help,
+  .#{$form-item-cls}-extra {
+    min-height: $form-item-margin-bottom;
+    line-height: $form-item-margin-bottom;
+  }
+
+  .#{$form-item-cls}-control-content {
+    min-height: $height-lg - 2;
+  }
+
+  .#{$semi-prefix}-input {
+    font-size: $font-size-lg;
+  }
+
+  .#{$semi-prefix}-input-number {
+    font-size: $font-size-lg;
+    input {
+      height: $height-lg - 2;
+    }
+  }
+
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-picker {
+    padding: 0px 11px;
+    line-height: $height-lg - 2;
+
+    input {
+      height: $height-lg - 2;
+      font-size: $font-size-lg;
+    }
+  }
+
+  .#{$semi-prefix}-btn {
+    height: $height-lg;
+    padding: 0px 8px;
+  }
+
+  .#{$semi-prefix}-radio-button-wrapper {
+    height: $height-lg;
+    line-height: $height-lg;
+  }
+
+  .#{$semi-prefix}-cascader-picker {
+    height: $height-lg - 2;
+
+    input {
+      padding: 0px 11px;
+      height: $height-lg - 2;
+      font-size: $font-size-lg;
+    }
+  }
+
+  .#{$semi-prefix}-select-single:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector {
+    padding: 0px 11px;
+    height: $height-lg;
+    font-size: $font-size-lg;
+    line-height: $height-lg;
+
+    .#{$semi-prefix}-select-selection-search {
+      height: $height-lg;
+      line-height: $height-lg - 2;
+
+      &-input {
+        height: $height-lg;
+        line-height: $height-lg - 2;
+      }
+    }
+
+    .#{$semi-prefix}-select-selection-placeholder {
+      line-height: $height-lg - 2;
+      height: $height-lg;
+    }
+
+    .#{$semi-prefix}-select-selection-item {
+      line-height: $height-lg - 2;
+      height: $height-lg;
+    }
+  }
+
+  .#{$semi-prefix}-select-multiple:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector {
+    padding: 0px 2px;
+    height: $height-lg - 2;
+    font-size: $font-size-lg;
+    line-height: $height-lg;
+
+    &::after {
+      height: $height-lg - 8;
+      line-height: $height-lg - 8;
+    }
+
+    .#{$semi-prefix}-select-selection-search {
+      height: $height-lg - 8;
+      line-height: $height-lg - 8;
+
+      &-input {
+        height: $height-lg - 12;
+        line-height: $height-lg - 12;
+      }
+    }
+
+    .#{$semi-prefix}-select-selection-placeholder {
+      line-height: $height-lg - 8;
+      height: $height-lg - 8;
+    }
+
+    .#{$semi-prefix}-select-selection-overflow-item {
+      align-self: flex-start;
+    }
+
+    .#{$semi-prefix}-select-selection-item {
+      line-height: $height-lg - 10;
+      height: $height-lg - 8;
+    }
+  }
+
+  &.#{$form-item-cls}-feedback-layout-terse {
+    margin-bottom: 8px;
+
+    &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+      margin-bottom: 0;
+    }
+  }
+
+  &.#{$form-item-cls}-feedback-layout-loose {
+    margin-bottom: $form-item-margin-bottom;
+
+    &.#{$form-item-cls}-feedback-has-text:not(.#{$form-item-cls}-inset) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.#{$form-item-cls} {
+  &-layout-vertical {
+    display: block;
+
+    .#{$form-item-cls}-label {
+      min-height: $height-base - 10;
+      line-height: 1.5715;
+    }
+  }
+}
+
+.#{$form-item-cls}-feedback-layout-popover {
+  margin-bottom: 8px;
+}
+
+.#{$form-item-cls}-label-tooltip-icon {
+  margin-left: 4px;
+  color: #00000073;
+  display: flex;
+  align-items: center;
+  max-height: $height-base;
+
+  span {
+    display: inline-flex;
+  }
+}
+
+.#{$form-item-cls}-control-align-left {
+  .#{$form-item-cls}-control-content {
+    justify-content: flex-start;
+  }
+}
+
+.#{$form-item-cls}-control-align-right {
+  .#{$form-item-cls}-control-content {
+    justify-content: flex-end;
+  }
+}
+
+.#{$form-item-cls}-control-wrap {
+  .#{$form-item-cls}-control {
+    white-space: pre-line;
+    word-break: break-all;
+  }
+}
+
+.#{$form-item-cls}-asterisk {
+  color: $error-color;
+  margin-right: 4px;
+  display: inline-block;
+  font-family: SimSun, sans-serif;
+}
+
+.#{$form-item-cls}-colon {
+  margin-left: 2px;
+  margin-right: 8px;
+}
+
+.#{$form-item-cls}-help,
+.#{$form-item-cls}-extra {
+  clear: both;
+  min-height: $form-item-margin-bottom - 2;
+  color: rgba(0, 0, 0, 0.45);
+  transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding-top: 0px;
+}
+
+.#{$form-item-cls}-fullness {
+  > .#{$form-item-cls}-control {
+    > .#{$form-item-cls}-control-content {
+      > .#{$form-item-cls}-control-content-component {
+        > *:first-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.#{$form-item-cls}-control-content-component-has-feedback-icon {
+  border-radius: 2px;
+  border: 1px solid $border-color-base;
+  padding-right: 8px;
+  transition: all 0.3s;
+  touch-action: manipulation;
+  outline: none;
+
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-cascader-picker:focus .#{$semi-prefix}-cascader-input,
+  .#{$semi-prefix}-select:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.#{$form-item-cls}-bordered-none {
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-cascader-picker:focus .#{$semi-prefix}-cascader-input,
+  .#{$semi-prefix}-select:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-input {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .#{$semi-prefix}-input-number-handler-wrap {
+    border: none !important;
+
+    .#{$semi-prefix}-input-number-handler {
+      border: none !important;
+    }
+  }
+}
+
+.#{$form-item-cls}-inset {
+  border-radius: 2px;
+  border: 1px solid $border-color-base;
+  padding-left: 12px;
+  transition: 0.3s all;
+
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-cascader-picker:focus .#{$semi-prefix}-cascader-input,
+  .#{$semi-prefix}-select:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .#{$semi-prefix}-input-number-handler-wrap {
+    border: none !important;
+
+    .#{$semi-prefix}-input-number-handler {
+      border: none !important;
+    }
+  }
+
+  &:hover {
+    // .hover();
+  }
+}
+
+.#{$form-item-cls}-inset-active {
+  // .active();
+}
+
+.#{$form-item-cls}-active {
+  .#{$form-item-cls}-control-content-component-has-feedback-icon {
+    // .active();
+  }
+
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-cascader-picker:focus .#{$semi-prefix}-cascader-input,
+  .#{$semi-prefix}-select:not(.#{$semi-prefix}-select-customize-input)
+    .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-input {
+    // .active();
+  }
+}
+
+.#{$form-item-cls} {
+  &:hover {
+    .#{$form-item-cls}-control-content-component-has-feedback-icon {
+      // .hover();
+    }
+  }
+}
+
+.#{$form-item-cls}-error {
+  .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input {
+    border-color: $error-color !important;
+  }
+
+  .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-affix-wrapper:hover,
+  .#{$semi-prefix}-input:hover {
+    border-color: $error-color !important;
+  }
+
+  .#{$semi-prefix}-select:not(.#{$semi-prefix}-select-disabled):not(.#{$semi-prefix}-select-customize-input) {
+    .#{$semi-prefix}-select-selector {
+      background-color: $form-error-input-bg;
+      border-color: $error-color !important;
+    }
+
+    &.#{$semi-prefix}-select-open .#{$semi-prefix}-select-selector,
+    &.#{$semi-prefix}-select-focused .#{$semi-prefix}-select-selector {
+      // .active($error-color);
+    }
+  }
+
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-picker {
+    background-color: $form-error-input-bg;
+    border-color: $error-color;
+
+    &-focused,
+    &:focus {
+      // .active($error-color);
+    }
+
+    &:not([disabled]):hover {
+      background-color: $form-error-input-bg;
+      border-color: $error-color;
+    }
+  }
+
+  .#{$semi-prefix}-cascader-picker:focus .#{$semi-prefix}-cascader-input {
+    background-color: $form-error-input-bg;
+    // .active($error-color);
+  }
+
+  .#{$semi-prefix}-input-affix-wrapper-focused,
+  .#{$semi-prefix}-input-affix-wrapper:focus,
+  .#{$semi-prefix}-input-focused,
+  .#{$semi-prefix}-input:focus {
+    // .active($error-color);
+  }
+}
+
+.#{$form-item-cls}-error-help {
+  color: $error-color !important;
+}
+
+.#{$form-item-cls}-warning-help {
+  color: $warning-color !important;
+}
+
+.#{$form-item-cls}-success-help {
+  color: $success-color !important;
+}
+
+.#{$form-item-cls}-warning {
+  .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input {
+    border-color: $warning-color !important;
+  }
+
+  .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-affix-wrapper:hover,
+  .#{$semi-prefix}-input:hover {
+    border-color: $warning-color !important;
+  }
+
+  .#{$semi-prefix}-select:not(.#{$semi-prefix}-select-disabled):not(.#{$semi-prefix}-select-customize-input) {
+    .#{$semi-prefix}-select-selector {
+      background-color: $form-warning-input-bg;
+      border-color: $warning-color !important;
+    }
+
+    &.#{$semi-prefix}-select-open .#{$semi-prefix}-select-selector,
+    &.#{$semi-prefix}-select-focused .#{$semi-prefix}-select-selector {
+      // .active($warning-color);
+    }
+  }
+
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-picker {
+    background-color: $form-warning-input-bg;
+    border-color: $warning-color;
+
+    &-focused,
+    &:focus {
+      // .active($warning-color);
+    }
+
+    &:not([disabled]):hover {
+      background-color: $form-warning-input-bg;
+      border-color: $warning-color;
+    }
+  }
+
+  .#{$semi-prefix}-cascader-picker:focus .#{$semi-prefix}-cascader-input {
+    background-color: $form-warning-input-bg;
+    // .active($warning-color);
+  }
+
+  .#{$semi-prefix}-input-affix-wrapper-focused,
+  .#{$semi-prefix}-input-affix-wrapper:focus,
+  .#{$semi-prefix}-input-focused,
+  .#{$semi-prefix}-input:focus {
+    // .active($warning-color);
+  }
+}
+
+.#{$form-item-cls}-success {
+  .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input {
+    border-color: $success-color !important;
+  }
+
+  .#{$semi-prefix}-select-selector,
+  .#{$semi-prefix}-cascader-picker,
+  .#{$semi-prefix}-picker,
+  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-input-number,
+  .#{$semi-prefix}-input-affix-wrapper,
+  .#{$semi-prefix}-input-affix-wrapper:hover,
+  .#{$semi-prefix}-input:hover {
+    border-color: $success-color !important;
+  }
+
+  .#{$semi-prefix}-input-affix-wrapper-focused,
+  .#{$semi-prefix}-input-affix-wrapper:focus,
+  .#{$semi-prefix}-input-focused,
+  .#{$semi-prefix}-input:focus {
+    border-color: $success-color !important;
+    border-right-width: 1px !important;
+    outline: 0;
+  }
+}

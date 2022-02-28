@@ -1,0 +1,7 @@
+@import '../__styles__/theme.scss';
+
+$form-grid-prefix-cls: 'formily-semi-grid';
+
+.#{$form-grid-prefix-cls}-layout {
+  display: grid;
+}

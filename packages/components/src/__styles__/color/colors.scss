@@ -1,0 +1,162 @@
+@import 'colorPalette';
+
+// color palettes
+$blue-base: #1890ff;
+$blue-6: $blue-base;
+$blue-1: colorPalette($blue-6, 1);
+$blue-2: colorPalette($blue-6, 2);
+$blue-3: colorPalette($blue-6, 3);
+$blue-4: colorPalette($blue-6, 4);
+$blue-5: colorPalette($blue-6, 5);
+$blue-7: colorPalette($blue-6, 7);
+$blue-8: colorPalette($blue-6, 8);
+$blue-9: colorPalette($blue-6, 9);
+$blue-10: colorPalette($blue-6, 10);
+
+$purple-base: #722ed1;
+$purple-6: $purple-base;
+$purple-1: colorPalette($purple-6, 1);
+$purple-2: colorPalette($purple-6, 2);
+$purple-3: colorPalette($purple-6, 3);
+$purple-4: colorPalette($purple-6, 4);
+$purple-5: colorPalette($purple-6, 5);
+$purple-7: colorPalette($purple-6, 7);
+$purple-8: colorPalette($purple-6, 8);
+$purple-9: colorPalette($purple-6, 9);
+$purple-10: colorPalette($purple-6, 10);
+
+$cyan-base: #13c2c2;
+$cyan-6: $cyan-base;
+$cyan-1: colorPalette($cyan-6, 1);
+$cyan-2: colorPalette($cyan-6, 2);
+$cyan-3: colorPalette($cyan-6, 3);
+$cyan-4: colorPalette($cyan-6, 4);
+$cyan-5: colorPalette($cyan-6, 5);
+$cyan-7: colorPalette($cyan-6, 7);
+$cyan-8: colorPalette($cyan-6, 8);
+$cyan-9: colorPalette($cyan-6, 9);
+$cyan-10: colorPalette($cyan-6, 10);
+
+$green-base: #52c41a;
+$green-6: $green-base;
+$green-1: colorPalette($green-6, 1);
+$green-2: colorPalette($green-6, 2);
+$green-3: colorPalette($green-6, 3);
+$green-4: colorPalette($green-6, 4);
+$green-5: colorPalette($green-6, 5);
+$green-7: colorPalette($green-6, 7);
+$green-8: colorPalette($green-6, 8);
+$green-9: colorPalette($green-6, 9);
+$green-10: colorPalette($green-6, 10);
+
+$magenta-base: #eb2f96;
+$magenta-6: $magenta-base;
+$magenta-1: colorPalette($magenta-6, 1);
+$magenta-2: colorPalette($magenta-6, 2);
+$magenta-3: colorPalette($magenta-6, 3);
+$magenta-4: colorPalette($magenta-6, 4);
+$magenta-5: colorPalette($magenta-6, 5);
+$magenta-7: colorPalette($magenta-6, 7);
+$magenta-8: colorPalette($magenta-6, 8);
+$magenta-9: colorPalette($magenta-6, 9);
+$magenta-10: colorPalette($magenta-6, 10);
+
+// alias of magenta
+$pink-base: #eb2f96;
+$pink-6: $pink-base;
+$pink-1: colorPalette($pink-6, 1);
+$pink-2: colorPalette($pink-6, 2);
+$pink-3: colorPalette($pink-6, 3);
+$pink-4: colorPalette($pink-6, 4);
+$pink-5: colorPalette($pink-6, 5);
+$pink-7: colorPalette($pink-6, 7);
+$pink-8: colorPalette($pink-6, 8);
+$pink-9: colorPalette($pink-6, 9);
+$pink-10: colorPalette($pink-6, 10);
+
+$red-base: #f5222d;
+$red-6: $red-base;
+$red-1: colorPalette($red-6, 1);
+$red-2: colorPalette($red-6, 2);
+$red-3: colorPalette($red-6, 3);
+$red-4: colorPalette($red-6, 4);
+$red-5: colorPalette($red-6, 5);
+$red-7: colorPalette($red-6, 7);
+$red-8: colorPalette($red-6, 8);
+$red-9: colorPalette($red-6, 9);
+$red-10: colorPalette($red-6, 10);
+
+$orange-base: #fa8c16;
+$orange-6: $orange-base;
+$orange-1: colorPalette($orange-6, 1);
+$orange-2: colorPalette($orange-6, 2);
+$orange-3: colorPalette($orange-6, 3);
+$orange-4: colorPalette($orange-6, 4);
+$orange-5: colorPalette($orange-6, 5);
+$orange-7: colorPalette($orange-6, 7);
+$orange-8: colorPalette($orange-6, 8);
+$orange-9: colorPalette($orange-6, 9);
+$orange-10: colorPalette($orange-6, 10);
+
+$yellow-base: #fadb14;
+$yellow-6: $yellow-base;
+$yellow-1: colorPalette($yellow-6, 1);
+$yellow-2: colorPalette($yellow-6, 2);
+$yellow-3: colorPalette($yellow-6, 3);
+$yellow-4: colorPalette($yellow-6, 4);
+$yellow-5: colorPalette($yellow-6, 5);
+$yellow-7: colorPalette($yellow-6, 7);
+$yellow-8: colorPalette($yellow-6, 8);
+$yellow-9: colorPalette($yellow-6, 9);
+$yellow-10: colorPalette($yellow-6, 10);
+
+$volcano-base: #fa541c;
+$volcano-6: $volcano-base;
+$volcano-1: colorPalette($volcano-6, 1);
+$volcano-2: colorPalette($volcano-6, 2);
+$volcano-3: colorPalette($volcano-6, 3);
+$volcano-4: colorPalette($volcano-6, 4);
+$volcano-5: colorPalette($volcano-6, 5);
+$volcano-7: colorPalette($volcano-6, 7);
+$volcano-8: colorPalette($volcano-6, 8);
+$volcano-9: colorPalette($volcano-6, 9);
+$volcano-10: colorPalette($volcano-6, 10);
+
+$geekblue-base: #2f54eb;
+$geekblue-6: $geekblue-base;
+$geekblue-1: colorPalette($geekblue-6, 1);
+$geekblue-2: colorPalette($geekblue-6, 2);
+$geekblue-3: colorPalette($geekblue-6, 3);
+$geekblue-4: colorPalette($geekblue-6, 4);
+$geekblue-5: colorPalette($geekblue-6, 5);
+$geekblue-7: colorPalette($geekblue-6, 7);
+$geekblue-8: colorPalette($geekblue-6, 8);
+$geekblue-9: colorPalette($geekblue-6, 9);
+$geekblue-10: colorPalette($geekblue-6, 10);
+
+$lime-base: #a0d911;
+$lime-6: $lime-base;
+$lime-1: colorPalette($lime-6, 1);
+$lime-2: colorPalette($lime-6, 2);
+$lime-3: colorPalette($lime-6, 3);
+$lime-4: colorPalette($lime-6, 4);
+$lime-5: colorPalette($lime-6, 5);
+$lime-7: colorPalette($lime-6, 7);
+$lime-8: colorPalette($lime-6, 8);
+$lime-9: colorPalette($lime-6, 9);
+$lime-10: colorPalette($lime-6, 10);
+
+$gold-base: #faad14;
+$gold-6: $gold-base;
+$gold-1: colorPalette($gold-6, 1);
+$gold-2: colorPalette($gold-6, 2);
+$gold-3: colorPalette($gold-6, 3);
+$gold-4: colorPalette($gold-6, 4);
+$gold-5: colorPalette($gold-6, 5);
+$gold-7: colorPalette($gold-6, 7);
+$gold-8: colorPalette($gold-6, 8);
+$gold-9: colorPalette($gold-6, 9);
+$gold-10: colorPalette($gold-6, 10);
+
+$preset-colors: pink, magenta, red, volcano, orange, yellow, gold, cyan, lime, green, blue, geekblue,
+  purple;
