@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/npm/dm/@formily/semi"/>
 <a href="https://www.npmjs.com/package/@formily/semi"><img src="https://img.shields.io/npm/v/@formily/semi.svg"></a>
 <a href="https://codecov.io/gh/formilyjs/semi">
-  <img src="https://codecov.io/gh/formilyjs/semi/branch/master/graph/badge.svg?token=3V9RU8Wh9d"/>
+  <img src="https://codecov.io/gh/formilyjs/semi/branch/master/graph/badge.svg"/>
 </a>
 <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
 <a href="https://github.com/actions-cool/issues-helper">
@@ -24,7 +24,7 @@
 
 - 🖼 可设计，借助 Form Builder 可以快速搭建表单
 - 🚀 高性能，字段分布式渲染，大大减轻 React 渲染压力
-- 💡 支持 Ant Design/Fusion Next 组件体系
+- 💡 支持 [SemiDeisgn](https://github.com/DouyinFE/semi-design) 组件体系
 - 🎨 JSX 标签化写法/JSON Schema 数据驱动方案无缝迁移过渡
 - 🏅 副作用逻辑独立管理，涵盖各种复杂联动校验逻辑
 - 🌯 支持各种表单复杂布局方案

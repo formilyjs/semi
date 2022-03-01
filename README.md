@@ -4,7 +4,7 @@ English | [简体中文](./README.zh-CN.md)
 <img src="https://img.alicdn.com/tfs/TB1fHhZu4D1gK0jSZFyXXciOVXa-2500-1200.png">
 <a href="https://www.npmjs.com/package/@formily/semi"><img src="https://img.shields.io/npm/v/@formily/semi.svg"></a>
 <a href="https://codecov.io/gh/formilyjs/semi">
-  <img src="https://codecov.io/gh/formilyjs/semi/branch/master/graph/badge.svg?token=3V9RU8Wh9d"/>
+  <img src="https://codecov.io/gh/formilyjs/semi/branch/master/graph/badge.svg"/>
 </a>
 <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
 <a href="https://github.com/actions-cool/issues-helper">
@@ -22,7 +22,7 @@ The Awesome Components Library with Formily & Semi.
 
 - 🖼 Designable, You can quickly develop forms at low cost through [Form Builder](https://designable-antd.formilyjs.org/).
 - 🚀 High performance, fields managed independently, rather rerender the whole tree.
-- 💡 Integrated Alibaba Fusion and Ant Design components are guaranteed to work out of the box.
+- 💡 Integrated [SemiDesign](https://github.com/DouyinFE/semi-design) are guaranteed to work out of the box.
 - 🎨 JSON Schema applied for BackEnd. JSchema applied for FrontEnd. Two paradigms can be converted to each other.
 - 🏅 Side effects are managed independently, making form data linkages easier than ever before.
 - 🌯 Override most complicated form layout use cases.
@@ -48,7 +48,7 @@ https://semi.formilyjs.org
 ## Contributors
 
 This project exists thanks to all the people who contribute.
-<a href="https://github.com/formilyjs/semi/graphs/contributors"><img src="https://contrib.rocks/image?repo=formilyjs/semi" /></a>
+<a href="https://github.com/formilyjs/semi/graphs/contributors"><img src="https://contrib.rocks/image?repo=formilyjs/semi?date=now" /></a>
 
 ## LICENSE
 
