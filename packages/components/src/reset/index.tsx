@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@douyinfe/semi-ui";
-import { ButtonProps } from "@douyinfe/semi-ui/button";
+import { ButtonProps } from "@douyinfe/semi-ui/lib/es/button";
 import { useForm } from "@formily/react";
 import { IFieldResetOptions } from "@formily/core";
 

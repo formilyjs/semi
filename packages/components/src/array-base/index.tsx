@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { Button } from '@douyinfe/semi-ui';
-import { ButtonProps } from '@douyinfe/semi-ui/button';
+import { ButtonProps } from "@douyinfe/semi-ui/lib/es/button";
 import {
   IconPlus,
   IconDelete,
@@ -8,7 +8,7 @@ import {
   IconChevronDown,
   IconChevronUp
 } from '@douyinfe/semi-icons';
-import { IconProps as SemiIconProps } from '@douyinfe/semi-ui/icons';
+import { IconProps as SemiIconProps } from "@douyinfe/semi-ui/lib/es/icons";
 import { useField, useFieldSchema, Schema, JSXComponent } from '@formily/react';
 import { ArrayField } from '@formily/core';
 import { isValid } from '@formily/shared';

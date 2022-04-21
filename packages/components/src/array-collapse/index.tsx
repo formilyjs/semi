@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Card, Collapse, Empty } from "@douyinfe/semi-ui";
-import { CollapsePanelProps } from "@douyinfe/semi-ui/collapse/item";
-import { CollapseReactProps } from "@douyinfe/semi-ui/collapse";
+import { CollapsePanelProps } from "@douyinfe/semi-ui/lib/es/collapse";
+import { CollapseReactProps } from "@douyinfe/semi-ui/lib/es/collapse";
 import { ArrayField } from "@formily/core";
 import {
   RecursionField,

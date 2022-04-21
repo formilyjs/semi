@@ -15,7 +15,7 @@ import {
   Tooltip,
 } from '@douyinfe/semi-ui';
 import { IconClear, IconTickCircle, IconAlertCircle, IconHelpCircle } from '@douyinfe/semi-icons';
-import { TooltipProps } from '@douyinfe/semi-ui/tooltip';
+import { TooltipProps } from "@douyinfe/semi-ui/lib/es/tooltip";
 
 import './index.scss';
 
