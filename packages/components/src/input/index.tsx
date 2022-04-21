@@ -2,8 +2,8 @@ import React from 'react'
 import { connect, mapProps, mapReadPretty } from '@formily/react'
 import { Input as SemiInput, TextArea } from '@douyinfe/semi-ui'
 import { IconLoading } from "@douyinfe/semi-icons";
-import { InputProps } from '@douyinfe/semi-ui/input';
-import { TextAreaProps } from '@douyinfe/semi-ui/input/textarea';
+import { InputProps } from "@douyinfe/semi-ui/lib/es/input";
+import { TextAreaProps } from "@douyinfe/semi-ui/lib/es/input";
 
 import './index.scss';
 import { PreviewText } from '../preview-text'

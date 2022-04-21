@@ -7,7 +7,7 @@
  import React, { useRef, useLayoutEffect, useState } from 'react'
  import StickyBox, { StickyBoxMode } from 'react-sticky-box'
  import { Space } from '@douyinfe/semi-ui'
- import { SpaceProps } from '@douyinfe/semi-ui/space'
+ import { SpaceProps } from "@douyinfe/semi-ui/lib/es/space"
  import { BaseItem, IFormItemProps } from '../form-item'
  import { usePrefixCls } from '../__builtins__'
  import cls from 'classnames'

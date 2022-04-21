@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import { action, model, markRaw } from "@formily/reactive";
 import { Steps } from "@douyinfe/semi-ui";
 import cls from "classnames";
-import { BasicStepsProps } from "@douyinfe/semi-ui/steps";
-import { StepProps } from "@douyinfe/semi-ui/steps/step";
+import { BasicStepsProps } from "@douyinfe/semi-ui/lib/es/steps";
+import { StepProps } from "@douyinfe/semi-ui/lib/es/steps";
 import { Form, VoidField } from "@formily/core";
 import {
   connect,

@@ -1,8 +1,8 @@
 import React, { Fragment, useMemo } from 'react';
 import { Collapse, Badge } from '@douyinfe/semi-ui';
 import { model } from '@formily/reactive';
-import { CollapseReactProps } from '@douyinfe/semi-ui/collapse';
-import { CollapsePanelProps } from '@douyinfe/semi-ui/collapse/item';
+import { CollapseReactProps } from "@douyinfe/semi-ui/lib/es/collapse";
+import { CollapsePanelProps } from "@douyinfe/semi-ui/lib/es/collapse";
 import { useField, observer, useFieldSchema, RecursionField } from '@formily/react';
 import { Schema, SchemaKey } from '@formily/json-schema';
 import cls from 'classnames';

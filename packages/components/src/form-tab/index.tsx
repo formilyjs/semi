@@ -10,7 +10,7 @@ import {
 import { Schema, SchemaKey } from "@formily/json-schema";
 import cls from "classnames";
 import { usePrefixCls } from "../__builtins__";
-import { TabPaneProps, TabsProps } from "@douyinfe/semi-ui/tabs";
+import { TabPaneProps, TabsProps } from "@douyinfe/semi-ui/lib/es/tabs";
 
 export interface IFormTab {
   activeKey?: string;

@@ -1,7 +1,7 @@
 import { connect, mapProps } from '@formily/react';
 import { Radio as SemiRadio } from '@douyinfe/semi-ui';
-import { RadioProps } from '@douyinfe/semi-ui/radio';
-import { RadioGroupProps } from '@douyinfe/semi-ui/radio/radioGroup';
+import { RadioProps } from "@douyinfe/semi-ui/lib/es/radio";
+import { RadioGroupProps } from "@douyinfe/semi-ui/lib/es/radio";
 import RadioGroup from '../radio-group';
 
 type ComposedRadio = React.FC<RadioProps> & {

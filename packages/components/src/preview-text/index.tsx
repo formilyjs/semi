@@ -2,12 +2,12 @@ import React, { createContext, useContext } from 'react'
 import { isPlainObj, isArr, isValid } from '@formily/shared'
 import { Field } from '@formily/core'
 import { observer, useField } from '@formily/react'
-import { InputProps } from '@douyinfe/semi-ui/input'
-import { SelectProps } from '@douyinfe/semi-ui/select'
-import { TreeSelectProps } from '@douyinfe/semi-ui/treeSelect'
-import { CascaderProps } from '@douyinfe/semi-ui/cascader'
-import { DatePickerProps, } from '@douyinfe/semi-ui/datePicker'
-import { TimePickerProps } from '@douyinfe/semi-ui/timePicker/TimePicker'
+import { InputProps } from "@douyinfe/semi-ui/lib/es/input"
+import { SelectProps } from "@douyinfe/semi-ui/lib/es/select"
+import { TreeSelectProps } from "@douyinfe/semi-ui/lib/es/treeSelect"
+import { CascaderProps } from "@douyinfe/semi-ui/lib/es/cascader"
+import { DatePickerProps, } from "@douyinfe/semi-ui/lib/es/datePicker"
+import { TimePickerProps } from "@douyinfe/semi-ui/lib/es/timePicker"
 import { Tag, Space } from '@douyinfe/semi-ui'
 import cls from 'classnames'
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, mapReadPretty } from '@formily/react';
 import { Input } from '@douyinfe/semi-ui';
-import { InputProps } from '@douyinfe/semi-ui/input';
+import { InputProps } from "@douyinfe/semi-ui/lib/es/input";
 import { PasswordStrength } from './password-strength';
 import { PreviewText } from '../preview-text';
 

@@ -6,9 +6,9 @@ import React, {
   useContext,
 } from "react";
 import { Table, Pagination, Space, Select, Badge } from "@douyinfe/semi-ui";
-import { PaginationProps } from "@douyinfe/semi-ui/pagination";
-import { TableProps, ColumnProps } from "@douyinfe/semi-ui/table";
-import { SelectProps } from "@douyinfe/semi-ui/select";
+import { PaginationProps } from "@douyinfe/semi-ui/lib/es/pagination";
+import { TableProps, ColumnProps } from "@douyinfe/semi-ui/lib/es/table";
+import { SelectProps } from "@douyinfe/semi-ui/lib/es/select";
 import cls from "classnames";
 import { SortableContainer, SortableElement } from "react-sortable-hoc";
 import { GeneralField, FieldDisplayTypes, ArrayField } from "@formily/core";
