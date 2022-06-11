@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.3(2022-06-11)
+
+### :bug: Bug Fixes
+
+1. [fix: semi schemaform context #3179](https://github.com/formilyjs/semi/commit/7500eda) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.2(2022-04-21)
 
 ### :tada: Enhancements
