@@ -77,6 +77,10 @@ group:
 注意：title 属性可以接收 Field 模型中的 title 映射，也就是在 Field 上传 title 也是生效的
 
 
-### ArrayItems.useIndex
+### ArrayCollapse.useIndex
 
 > 读取当前渲染行索引的 React Hook
+
+### ArrayCollapse.useRecord
+
+> 读取当前渲染记录的 React Hook

@@ -57,9 +57,10 @@ export type ArrayBaseMixins = {
   Index?: React.FC;
   useArray?: () => IArrayBaseContext;
   useIndex?: () => number;
+  useRecord?: (record?: number) => any
 };
 
-type ComposedArrayBase = React.FC<IArrayBaseProps> &
+type ComposedArrayBase = React.FC<React.PropsWithChildren<IArrayBaseProps>> &
   ArrayBaseMixins & {
     Item: React.FC<IArrayBaseItemProps>;
     mixin: <T extends JSXComponent>(target: T) => T & ArrayBaseMixins;
@@ -75,6 +76,11 @@ const useIndex = (index?: number) => {
   const ctx = useContext(ItemContext);
   return ctx ? ctx.index : index ?? 0;
 };
+
+const useRecord = (record?: number) => {
+  const ctx = useContext(ItemContext)
+  return ctx ? ctx.record : record
+}
 
 const getDefaultValue = (defaultValue: any, schema: Schema) => {
   if (isValid(defaultValue)) return defaultValue;
@@ -247,6 +253,7 @@ ArrayBase.MoveUp = React.forwardRef((props, ref) => {
 
 ArrayBase.useArray = useArray;
 ArrayBase.useIndex = useIndex;
+ArrayBase.useRecord = useRecord;
 ArrayBase.mixin = (target: any) => {
   target.Index = ArrayBase.Index;
   target.SortHandle = ArrayBase.SortHandle;
@@ -256,6 +263,7 @@ ArrayBase.mixin = (target: any) => {
   target.MoveUp = ArrayBase.MoveUp;
   target.useArray = ArrayBase.useArray;
   target.useIndex = ArrayBase.useIndex;
+  target.useRecord = ArrayBase.useRecord;
   return target;
 };
 
