@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.4(2022-08-22)
+
+### :tada: Enhancements
+
+1. [feat: add ArrayBase.useRecord for discussion #3345](https://github.com/formilyjs/semi/commit/d066b32) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.3(2022-06-11)
 
 ### :bug: Bug Fixes
