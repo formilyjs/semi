@@ -612,7 +612,7 @@
 
 "@formily/core@2.2.1", "@formily/core@^2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/core/-/core-2.2.1.tgz#8e9d4b0ffac14d5b830d261c5d9b0cce54e3288a"
+  resolved "https://registry.yarnpkg.com/@formily/core/-/core-2.2.1.tgz#8e9d4b0ffac14d5b830d261c5d9b0cce54e3288a"
   integrity sha512-WOucRfapNAH5iiz2S/s1U6wGHIF5ISIQwtUCsqH06yftACZ48Bj5fRBNqKVdMRrG45YTq4O6qI2Aoj06aiwQYg==
   dependencies:
     "@formily/reactive" "2.2.1"
@@ -621,7 +621,7 @@
 
 "@formily/grid@2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/grid/-/grid-2.2.1.tgz#96df6ec7e9b02bbb76dac90eb71b092d4be76798"
+  resolved "https://registry.yarnpkg.com/@formily/grid/-/grid-2.2.1.tgz#96df6ec7e9b02bbb76dac90eb71b092d4be76798"
   integrity sha512-d2yXPXEzGyhiicGLtnZpEqftmHRAUvLRbQF9z6vp05/uOlcEjceTf2x7Wj9ucV+VM/0vmjiM3xLd3MCGCJh4XQ==
   dependencies:
     "@formily/reactive" "2.2.1"
@@ -629,7 +629,7 @@
 
 "@formily/json-schema@2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/json-schema/-/json-schema-2.2.1.tgz#dd01ab091521f53884ab2e1088adaab72be478ae"
+  resolved "https://registry.yarnpkg.com/@formily/json-schema/-/json-schema-2.2.1.tgz#dd01ab091521f53884ab2e1088adaab72be478ae"
   integrity sha512-JMGNFzFPVTQQI698K68NLME6NvxvwzmfQpLWwkVlV1EiHSyTJt2Ak5BkNbR/pBrvqYthBR/PIlmU3PIC+O73QQ==
   dependencies:
     "@formily/core" "2.2.1"
@@ -638,12 +638,12 @@
 
 "@formily/path@2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/path/-/path-2.2.1.tgz#939f57dc532b888674d2e86749f2f98461554387"
+  resolved "https://registry.yarnpkg.com/@formily/path/-/path-2.2.1.tgz#939f57dc532b888674d2e86749f2f98461554387"
   integrity sha512-RKbMDxv7669tx931cSVn4jCS2bTt863V99PC9unIAFcwaKALyf2XXJLBhxeNmPfU8vdxn3UaxC4D6Ju1Jnw76Q==
 
 "@formily/react@2.2.1", "@formily/react@^2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/react/-/react-2.2.1.tgz#ac18469189f6d08391bd093db5625b98cde88265"
+  resolved "https://registry.yarnpkg.com/@formily/react/-/react-2.2.1.tgz#ac18469189f6d08391bd093db5625b98cde88265"
   integrity sha512-MImXIraPvkpGCzorAt4bFfvCO2qwA69Nhki8YkMTO4aY7pWJKZzsFkCiv+uWSCwMZkBj6mKWXQGkZRD7YGnb2w==
   dependencies:
     "@formily/core" "2.2.1"
@@ -656,7 +656,7 @@
 
 "@formily/reactive-react@2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/reactive-react/-/reactive-react-2.2.1.tgz#4c1256d6cf1683e6ae0e9885d6c875415d84fa79"
+  resolved "https://registry.yarnpkg.com/@formily/reactive-react/-/reactive-react-2.2.1.tgz#4c1256d6cf1683e6ae0e9885d6c875415d84fa79"
   integrity sha512-7jB0Yf8r2bcLrNoXnp7Ox6ZdMFaCJ0dzkVBwEh4htQ7j1t6PB7ROVkvZXxe9FXnuT1rknhR9NijqbGDPDep9aQ==
   dependencies:
     "@formily/reactive" "2.2.1"
@@ -664,21 +664,8 @@
 
 "@formily/reactive@2.2.1", "@formily/reactive@^2.2.1":
   version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/reactive/-/reactive-2.2.1.tgz#2588267268eea63467b1a5752673301b7c9c60cc"
+  resolved "https://registry.yarnpkg.com/@formily/reactive/-/reactive-2.2.1.tgz#2588267268eea63467b1a5752673301b7c9c60cc"
   integrity sha512-8NtHwoPyv8zmP6JSkFGU0osSlm1Y9jPe4TcHJYi3B2/GxYOI6o+qiJbBLDDkTsJXINw74R2MtjG+uNslDx4hkw==
-
-"@formily/shared@2.2.1", "@formily/shared@^2.2.1":
-  version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/shared/-/shared-2.2.1.tgz#b3e876d0eed93740b611c5bcdc3afce0d8e7254f"
-  integrity sha512-3Tm5NqfEQwDmPL18WcX5URF9m8QRlELFZfc+dpcNXfOJJUR25Hca5f+n+ct0vF5mfktSBt//FJO8213H+xRtoA==
-  dependencies:
-    "@formily/path" "2.2.1"
-    camel-case "^4.1.1"
-    lower-case "^2.0.1"
-    no-case "^3.0.4"
-    param-case "^3.0.4"
-    pascal-case "^3.1.1"
-    upper-case "^2.0.1"
 
 "@formily/shared@2.2.1", "@formily/shared@^2.2.1":
   version "2.2.1"
@@ -722,13 +709,6 @@
     rollup-plugin-typescript2 "^0.30.0"
     ts-node "^9.1.1"
     typescript "^4.1.5"
-
-"@formily/validator@2.2.1":
-  version "2.2.1"
-  resolved "http://bnpm.byted.org/@formily/validator/-/validator-2.2.1.tgz#f7c4526ee6ef924ef025f56581207c09db32b38d"
-  integrity sha512-74o7CaFiiJ3OF+ZzlsxxhkjCfwytuWwbtEm1/587Xkcjw0jrxjzzQiikdK4Oxev1i/TQxNl7iAeWAbx5q6/VXA==
-  dependencies:
-    "@formily/shared" "2.2.1"
 
 "@formily/validator@2.2.1":
   version "2.2.1"
@@ -3487,7 +3467,7 @@ caniuse-api@^3.0.0:
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001312:
   version "1.0.30001382"
-  resolved "http://bnpm.byted.org/caniuse-lite/-/caniuse-lite-1.0.30001382.tgz"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001382.tgz#4d37f0d0b6fffb826c8e5e1c0f4bf8ce592db949"
   integrity sha512-2rtJwDmSZ716Pxm1wCtbPvHtbDWAreTPxXbkc5RkKglow3Ig/4GNGazDI9/BVnXbG/wnv6r3B5FEbkfg9OcTGg==
 
 capture-exit@^2.0.0:
