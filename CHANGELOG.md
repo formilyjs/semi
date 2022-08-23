@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.5(2022-08-23)
+
+### :tada: Enhancements
+
+1. [feat: upgrade @formily/xxx to latest(2.2.1)](https://github.com/formilyjs/semi/commit/ffb196e) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.4(2022-08-22)
 
 ### :tada: Enhancements
