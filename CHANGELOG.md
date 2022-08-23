@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.0.1-beta.8(2022-08-23)
+
+### :bug: Bug Fixes
+
+1. [fix: registry](https://github.com/formilyjs/semi/commit/c9b53e8) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
+## v1.0.1-beta.7(2022-08-23)
+
+### :tada: Enhancements
+
+1. [feat: update readme](https://github.com/formilyjs/semi/commit/7092dfe) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
+## v1.0.1-beta.6(2022-08-23)
+
+### :bug: Bug Fixes
+
+1. [fix: lock @formily/xxx](https://github.com/formilyjs/semi/commit/e3c0332) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.5(2022-08-23)
 
 ### :tada: Enhancements
