@@ -2,6 +2,7 @@ export * from "./array-base";
 export * from "./array-collapse";
 export * from "./array-items";
 export * from "./array-table";
+export * from "./array-tabs";
 export * from "./form";
 export * from "./form-grid";
 export * from "./form-item";

@@ -1,0 +1,24 @@
+$prefix: formily-semi-tabs;
+.#{$prefix} {
+  .semi-tabs-bar {
+    display: flex;
+    &-extra {
+      padding: 0;
+    }
+    .#{$prefix}-addition {
+      height: 100%;
+      padding: 8px 10px;
+    }
+    .#{$prefix}-close {
+      top: 0;
+      margin-right: 0;
+      cursor: pointer;
+    }
+  }
+  .semi-tabs-tab-active .semi-typography a {
+    color: var(--color-primary) !important;
+  }
+  .semi-tabs-tab .semi-typography a {
+    color: var(--color-text-0);
+  }
+}
