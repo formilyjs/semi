@@ -78,6 +78,7 @@ export const ArrayTabs: React.FC<TabsProps> = observer((props) => {
           onClick={onEdit.bind(null, null, "add")}
         />
       }
+      onTabClose={(key) => onEdit(key, "remove")}
     >
       {dataSource?.map((_, index) => {
         const items = Array.isArray(schema.items)
@@ -88,6 +89,7 @@ export const ArrayTabs: React.FC<TabsProps> = observer((props) => {
           <TabPane
             key={key}
             itemKey={key}
+            closable={index !== 0}
             tab={<FeedbackBadge index={index} />}
           >
             <RecursionField schema={items} name={index} />
