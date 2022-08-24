@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.10(2022-08-24)
+
+### :bug: Bug Fixes
+
+1. [fix: 增加 tab 删除能力](https://github.com/formilyjs/semi/commit/4744c7a) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.9(2022-08-24)
 
 ### :tada: Enhancements
