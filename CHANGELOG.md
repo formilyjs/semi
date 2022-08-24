@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.9(2022-08-24)
+
+### :tada: Enhancements
+
+1. [feat: 增加 ArrayTabs](https://github.com/formilyjs/semi/commit/b355957) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.8(2022-08-23)
 
 ### :bug: Bug Fixes
