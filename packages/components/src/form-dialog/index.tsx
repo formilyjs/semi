@@ -49,8 +49,14 @@ export interface IFormDialog {
 
 export interface IModalProps
   extends Omit<ModalReactProps, "onOk" | "onCancel"> {
-  onOk?: (e: React.MouseEvent) => void | boolean | Promise<any>;
-  onCancel?: (e: React.MouseEvent) => void | boolean | Promise<any>;
+  getModalProps?: (
+    props: IModalProps & {
+      triggerConfirm?: () => any;
+      triggerCancel?: () => any;
+    }
+  ) => IModalProps;
+  onOk?: (e: any) => void | Promise<any> | boolean;
+  onCancel?: (e: any) => void | Promise<any> | boolean;
   loadingText?: React.ReactNode;
 }
 
@@ -113,6 +119,11 @@ export function FormDialog(title: any, id: any, renderer?: any): IFormDialog {
       {() => (
         <Modal
           {...modal}
+          {...(modal?.getModalProps?.({
+            ...modal,
+            triggerConfirm: resolve,
+            triggerCancel: reject,
+          }) || {})}
           visible={visible}
           confirmLoading={env?.form?.submitting}
           onCancel={(e) => {
@@ -209,7 +220,9 @@ const DialogFooter: React.FC = (props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [footer, setFooter] = useState<HTMLDivElement>();
   const footerRef = useRef<HTMLDivElement>();
-  const prefixCls = usePrefixCls("modal");
+  const prefixCls = usePrefixCls("", {
+    prefixCls: "semi-modal",
+  });
   useLayoutEffect(() => {
     const content = ref.current?.closest(`.${prefixCls}-content`);
     if (content) {

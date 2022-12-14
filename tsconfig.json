@@ -5,6 +5,7 @@
     "jsx": "react",
     "module": "commonjs",
     "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "noUnusedLocals": false,
     "preserveConstEnums": true,
