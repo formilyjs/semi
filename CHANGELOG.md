@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.11(2022-12-14)
+
+### :bug: Bug Fixes
+
+1. [fix: 优化 formSideSheet & formDialog](https://github.com/formilyjs/semi/commit/8000c3c) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.10(2022-08-24)
 
 ### :bug: Bug Fixes
