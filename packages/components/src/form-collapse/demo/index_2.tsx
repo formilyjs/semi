@@ -1,72 +1,80 @@
-import React from 'react';
-import { FormButtonGroup, Submit, SchemaRender, FormLayout, FormCollapse } from '@formily/semi';
-import { createForm } from '@formily/core';
-import { FormProvider } from '@formily/react';
-import { Button } from '@douyinfe/semi-ui';
+import React from "react";
+import {
+  FormButtonGroup,
+  Submit,
+  SchemaRender,
+  FormLayout,
+  FormCollapse,
+} from "@formily/semi";
+import { createForm } from "@formily/core";
+import { FormProvider } from "@formily/react";
+import { Button } from "@douyinfe/semi-ui";
 
 const form = createForm();
 const formCollapse = FormCollapse.createFormCollapse();
 
 const schema = {
-  type: 'object',
+  type: "object",
   properties: {
     collapse: {
-      type: 'void',
-      title: '折叠面板',
-      'x-decorator': 'FormItem',
-      'x-component': 'FormCollapse',
-      'x-component-props': {
+      type: "void",
+      title: "折叠面板",
+      "x-decorator": "FormItem",
+      "x-component": "FormCollapse",
+      "x-component-props": {
         // formCollapse: '{{formCollapse}}',
+        defaultActiveKey: "1",
+        // defaultActiveKey: ['1', '2'],
       },
       properties: {
         panel1: {
-          type: 'void',
-          'x-component': 'FormCollapse.CollapsePanel',
-          'x-component-props': {
-            header: 'A1',
-            itemKey: '1',
+          type: "void",
+          "x-component": "FormCollapse.CollapsePanel",
+          "x-component-props": {
+            header: "A1",
+            itemKey: "1",
           },
           properties: {
             aaa: {
-              type: 'string',
-              title: 'AAA',
-              'x-decorator': 'FormItem',
+              type: "string",
+              title: "AAA",
+              "x-decorator": "FormItem",
               required: true,
-              'x-component': 'Input',
+              "x-component": "Input",
             },
           },
         },
         panel2: {
-          type: 'void',
-          'x-component': 'FormCollapse.CollapsePanel',
-          'x-component-props': {
-            header: 'A2',
-            itemKey: '2',
+          type: "void",
+          "x-component": "FormCollapse.CollapsePanel",
+          "x-component-props": {
+            header: "A2",
+            itemKey: "2",
           },
           properties: {
             bbb: {
-              type: 'string',
-              title: 'BBB',
-              'x-decorator': 'FormItem',
+              type: "string",
+              title: "BBB",
+              "x-decorator": "FormItem",
               required: true,
-              'x-component': 'Input',
+              "x-component": "Input",
             },
           },
         },
         panel3: {
-          type: 'void',
-          'x-component': 'FormCollapse.CollapsePanel',
-          'x-component-props': {
-            header: 'A3',
-            itemKey: '3',
+          type: "void",
+          "x-component": "FormCollapse.CollapsePanel",
+          "x-component-props": {
+            header: "A3",
+            itemKey: "3",
           },
           properties: {
             ccc: {
-              type: 'string',
-              title: 'CCC',
-              'x-decorator': 'FormItem',
+              type: "string",
+              title: "CCC",
+              "x-decorator": "FormItem",
               required: true,
-              'x-component': 'Input',
+              "x-component": "Input",
             },
           },
         },
@@ -82,7 +90,7 @@ export default () => (
       <FormButtonGroup.FormItem>
         <Button
           onClick={() => {
-            form.query('panel3').take(field => {
+            form.query("panel3").take((field) => {
               field.visible = !field.visible;
             });
           }}
@@ -91,7 +99,7 @@ export default () => (
         </Button>
         <Button
           onClick={() => {
-            formCollapse.toggleActiveKey('2');
+            formCollapse.toggleActiveKey("2");
           }}
         >
           切换第二个Tab
