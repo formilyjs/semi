@@ -10,7 +10,7 @@ import {
 } from "@formily/react";
 import cls from "classnames";
 import { TabsProps } from "@douyinfe/semi-ui/lib/es/tabs";
-import { IconClose, IconPlus } from "@douyinfe/semi-icons";
+import { IconPlus } from "@douyinfe/semi-icons";
 
 import "./index.scss";
 import { usePrefixCls } from "../__builtins__";
@@ -72,11 +72,13 @@ export const ArrayTabs: React.FC<TabsProps> = observer((props) => {
       }}
       type="card"
       tabBarExtraContent={
-        <Button
-          icon={<IconPlus />}
-          className={cls(`${prefix}-addition`)}
-          onClick={onEdit.bind(null, null, "add")}
-        />
+        field.pattern === "editable" && (
+          <Button
+            icon={<IconPlus />}
+            className={cls(`${prefix}-addition`)}
+            onClick={onEdit.bind(null, null, "add")}
+          />
+        )
       }
       onTabClose={(key) => onEdit(key, "remove")}
     >
@@ -89,7 +91,7 @@ export const ArrayTabs: React.FC<TabsProps> = observer((props) => {
           <TabPane
             key={key}
             itemKey={key}
-            closable={index !== 0}
+            closable={index !== 0 && field.pattern === "editable"}
             tab={<FeedbackBadge index={index} />}
           >
             <RecursionField schema={items} name={index} />
