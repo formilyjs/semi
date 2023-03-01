@@ -1,7 +1,7 @@
 {
   "name": "@formily/semi-prototypes",
   "private": true,
-  "version": "1.0.1-beta.12",
+  "version": "1.0.1-beta.13",
   "license": "MIT",
   "main": "lib",
   "types": "lib/index.d.ts",
