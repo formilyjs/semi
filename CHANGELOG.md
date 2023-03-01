@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.13(2023-03-01)
+
+### :bug: Bug Fixes
+
+1. [fix(components): fix array-tabs readpretty operation on tabs](https://github.com/formilyjs/semi/commit/64c9f72) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.12(2023-01-18)
 
 ### :bug: Bug Fixes
