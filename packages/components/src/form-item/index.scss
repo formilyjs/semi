@@ -678,10 +678,11 @@ $form-item-cls: 'formily-semi-item';
 }
 
 .#{$form-item-cls}-error {
-  .#{$semi-prefix}-select-selector,
-  .#{$semi-prefix}-cascader-picker,
-  .#{$semi-prefix}-picker,
-  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-select,
+  .#{$semi-prefix}-cascader,
+  .#{$semi-prefix}-datepicker-range-input-wrapper,
+  .#{$semi-prefix}-input-wrapper,
+  .#{$semi-prefix}-input-textarea-wrapper,
   .#{$semi-prefix}-input-number,
   .#{$semi-prefix}-input-affix-wrapper,
   .#{$semi-prefix}-input-affix-wrapper,
@@ -689,10 +690,10 @@ $form-item-cls: 'formily-semi-item';
     border-color: $error-color !important;
   }
 
-  .#{$semi-prefix}-select-selector,
-  .#{$semi-prefix}-cascader-picker,
-  .#{$semi-prefix}-picker,
-  .#{$semi-prefix}-input,
+  .#{$semi-prefix}-select,
+  .#{$semi-prefix}-cascader,
+  .#{$semi-prefix}-datepicker-range-input-wrapper,
+  .#{$semi-prefix}-input-wrapper,
   .#{$semi-prefix}-input-number,
   .#{$semi-prefix}-input-affix-wrapper,
   .#{$semi-prefix}-input-affix-wrapper:hover,
