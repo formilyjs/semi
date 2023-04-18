@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.15(2023-04-18)
+
+### :bug: Bug Fixes
+
+1. [fix(components): fix #3793 arraytable sortable error](https://github.com/formilyjs/semi/commit/d5ecd93) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.14(2023-04-06)
 
 ### :bug: Bug Fixes
