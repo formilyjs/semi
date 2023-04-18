@@ -18,7 +18,7 @@ import {
   useFieldSchema,
   RecursionField,
 } from "@formily/react";
-import { isArr, isBool } from "@formily/shared";
+import { isArr, isBool, uid } from "@formily/shared";
 import { Schema } from "@formily/json-schema";
 
 import "./index.scss";
@@ -333,13 +333,11 @@ export const ArrayTable: ComposedArrayTable = observer(
     const columns = useArrayTableColumns(dataSource, sources);
     const pagination = isBool(props.pagination) ? {} : props.pagination;
     const addition = useAddition();
-    const defaultRowKey = (record?: any) => {
-      return dataSource.indexOf(record).toString();
-    };
+    const defaultRowKey = () => uid().toString();
 
     return (
       <ArrayTablePagination {...pagination} dataSource={dataSource}>
-        {(dataSource, pager) => (
+        {(innerDataSource, pager) => (
           <div ref={ref} className={prefixCls}>
             <ArrayBase {...props?.arrayBaseProps}>
               <ArrayTableComponentsContext.Provider value={{ ref, field }}>
@@ -351,10 +349,10 @@ export const ArrayTable: ComposedArrayTable = observer(
                   onChange={() => {}}
                   pagination={false}
                   columns={columns}
-                  dataSource={dataSource}
+                  dataSource={innerDataSource}
                   components={arrayTableComponents}
-                  onRow={(_, index) => ({
-                    index,
+                  onRow={(record) => ({
+                    index: dataSource.indexOf(record),
                   })}
                 />
               </ArrayTableComponentsContext.Provider>
