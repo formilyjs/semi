@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1-beta.16(2023-12-12)
+
+### :bug: Bug Fixes
+
+1. [fix(array-table): auto goto previous page when cur page's items were all deleted](https://github.com/formilyjs/semi/commit/9a12be9) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.15(2023-04-18)
 
 ### :bug: Bug Fixes
