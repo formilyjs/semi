@@ -4,6 +4,7 @@ import React, {
   useRef,
   forwardRef,
   useContext,
+  useEffect,
 } from "react";
 import { Table, Pagination, Space, Select, Badge } from "@douyinfe/semi-ui";
 import { PaginationProps } from "@douyinfe/semi-ui/lib/es/pagination";
@@ -229,6 +230,11 @@ const ArrayTablePagination: React.FC<IArrayTablePaginationProps> = (props) => {
   const handleChange = (current: number) => {
     setCurrent(current);
   };
+  useEffect(() => {
+    if (totalPage > 0 && totalPage < current) {
+      handleChange(totalPage);
+    }
+  }, [totalPage, current]);
 
   const renderPagination = () => {
     if (totalPage <= 1) return;
