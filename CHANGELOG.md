@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.1-beta.18(2024-06-12)
+
+### No Change Log
+
+## v1.0.1-beta.17(2024-06-12)
+
+### :bug: Bug Fixes
+
+1. [fix(scripts): rm preversion run test](https://github.com/formilyjs/semi/commit/861a523) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
+1. [fix: 删除 form-item 下无用错误样式](https://github.com/formilyjs/semi/commit/c8ee0e4) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.16(2023-12-12)
 
 ### :bug: Bug Fixes
