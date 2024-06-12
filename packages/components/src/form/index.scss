@@ -12,11 +12,6 @@
         padding-right: $padding-lg;
       }
     }
-    &-vertical .#{$form-item-cls} {
-      margin: 0;
-      padding: $padding-sm 0;
-      overflow: hidden;
-    }
   }
 
 }
