@@ -1,22 +1,21 @@
-import React, { createContext, useContext } from 'react';
-import { Button } from '@douyinfe/semi-ui';
+import React, { createContext, useContext } from "react";
+import { Button } from "@douyinfe/semi-ui";
 import { ButtonProps } from "@douyinfe/semi-ui/lib/es/button";
 import {
   IconPlus,
   IconDelete,
   IconMenu,
   IconChevronDown,
-  IconChevronUp
-} from '@douyinfe/semi-icons';
+  IconChevronUp,
+} from "@douyinfe/semi-icons";
 import { IconProps as SemiIconProps } from "@douyinfe/semi-ui/lib/es/icons";
-import { useField, useFieldSchema, Schema, JSXComponent } from '@formily/react';
-import { ArrayField } from '@formily/core';
-import { isValid } from '@formily/shared';
-import { SortableHandle } from 'react-sortable-hoc';
-import cls from 'classnames';
+import { useField, useFieldSchema, Schema, JSXComponent } from "@formily/react";
+import { ArrayField } from "@formily/core";
+import { isValid } from "@formily/shared";
+import cls from "classnames";
 
-import './index.scss';
-import { usePrefixCls } from '../__builtins__';
+import "./index.scss";
+import { usePrefixCls, SortableHandle } from "../__builtins__";
 
 interface IconProps extends SemiIconProps {
   style?: React.CSSProperties;
@@ -25,7 +24,7 @@ interface IconProps extends SemiIconProps {
 
 export interface IArrayBaseAdditionProps extends ButtonProps {
   title?: string;
-  method?: 'push' | 'unshift';
+  method?: "push" | "unshift";
 }
 
 export interface IArrayBaseProps {
@@ -57,7 +56,7 @@ export type ArrayBaseMixins = {
   Index?: React.FC;
   useArray?: () => IArrayBaseContext;
   useIndex?: () => number;
-  useRecord?: (record?: number) => any
+  useRecord?: (record?: number) => any;
 };
 
 type ComposedArrayBase = React.FC<React.PropsWithChildren<IArrayBaseProps>> &
@@ -78,21 +77,21 @@ const useIndex = (index?: number) => {
 };
 
 const useRecord = (record?: number) => {
-  const ctx = useContext(ItemContext)
-  return ctx ? ctx.record : record
-}
+  const ctx = useContext(ItemContext);
+  return ctx ? ctx.record : record;
+};
 
 const getDefaultValue = (defaultValue: any, schema: Schema) => {
   if (isValid(defaultValue)) return defaultValue;
   if (Array.isArray(schema?.items))
     return getDefaultValue(defaultValue, schema.items[0]);
-  if (schema?.items?.type === 'array') return [];
-  if (schema?.items?.type === 'boolean') return true;
-  if (schema?.items?.type === 'date') return '';
-  if (schema?.items?.type === 'datetime') return '';
-  if (schema?.items?.type === 'number') return 0;
-  if (schema?.items?.type === 'object') return {};
-  if (schema?.items?.type === 'string') return '';
+  if (schema?.items?.type === "array") return [];
+  if (schema?.items?.type === "boolean") return true;
+  if (schema?.items?.type === "date") return "";
+  if (schema?.items?.type === "datetime") return "";
+  if (schema?.items?.type === "number") return 0;
+  if (schema?.items?.type === "object") return {};
+  if (schema?.items?.type === "string") return "";
   return null;
 };
 
@@ -111,27 +110,27 @@ ArrayBase.Item = ({ children, ...props }: any) => (
 );
 
 const SortHandle = SortableHandle((props: any) => {
-  const prefixCls = usePrefixCls('array-base')
+  const prefixCls = usePrefixCls("array-base");
   return (
     <IconMenu
       {...props}
       className={cls(`${prefixCls}-sort-handle`, props.className)}
       style={{ ...props.style }}
     />
-  )
-}) as any
+  );
+}) as any;
 
 ArrayBase.SortHandle = (props) => {
   const array = useArray();
   if (!array) return null;
-  if (array.field?.pattern !== 'editable') return null;
+  if (array.field?.pattern !== "editable") return null;
   return <SortHandle {...props} />;
 };
 
 const Index = (props) => {
   const { renderIndex } = props;
   const index = useIndex();
-  const prefixCls = usePrefixCls('array-base');
+  const prefixCls = usePrefixCls("array-base");
   return (
     <span {...props} className={`${prefixCls}-index`}>
       {renderIndex?.(index) ?? `#${index + 1}.`}
@@ -144,11 +143,11 @@ ArrayBase.Index = Index;
 const Addition = (props) => {
   const self = useField();
   const array = useArray();
-  const prefixCls = usePrefixCls('array-base');
+  const prefixCls = usePrefixCls("array-base");
   if (!array) return null;
   if (
-    array?.field?.pattern !== 'editable' &&
-    array?.field?.pattern !== 'disabled'
+    array?.field?.pattern !== "editable" &&
+    array?.field?.pattern !== "disabled"
   ) {
     return null;
   }
@@ -161,7 +160,7 @@ const Addition = (props) => {
       onClick={(e) => {
         if (array.props?.disabled) return;
         const defaultValue = getDefaultValue(props.defaultValue, array.schema);
-        if (props.method === 'unshift') {
+        if (props.method === "unshift") {
           array?.field?.unshift(defaultValue);
           array.props?.onAdd?.(0);
         } else {
@@ -184,9 +183,9 @@ ArrayBase.Addition = Addition;
 ArrayBase.Remove = React.forwardRef((props, ref) => {
   const index = useIndex();
   const array = useArray();
-  const prefixCls = usePrefixCls('array-base');
+  const prefixCls = usePrefixCls("array-base");
   if (!array) return null;
-  if (array?.field?.pattern !== 'editable') return null;
+  if (array?.field?.pattern !== "editable") return null;
   return (
     <IconDelete
       {...props}
@@ -208,8 +207,8 @@ ArrayBase.Remove = React.forwardRef((props, ref) => {
 ArrayBase.MoveDown = React.forwardRef((props, ref) => {
   const index = useIndex(props.index);
   const array = useArray();
-  const prefixCls = usePrefixCls('array-base-move-down');
-  if (array?.field?.pattern !== 'editable') return null;
+  const prefixCls = usePrefixCls("array-base-move-down");
+  if (array?.field?.pattern !== "editable") return null;
   return (
     <IconChevronDown
       {...props}
@@ -231,8 +230,8 @@ ArrayBase.MoveDown = React.forwardRef((props, ref) => {
 ArrayBase.MoveUp = React.forwardRef((props, ref) => {
   const index = useIndex(props.index);
   const array = useArray();
-  const prefixCls = usePrefixCls('array-base-move-up');
-  if (array?.field?.pattern !== 'editable') return null;
+  const prefixCls = usePrefixCls("array-base-move-up");
+  if (array?.field?.pattern !== "editable") return null;
   return (
     <IconChevronUp
       {...props}
