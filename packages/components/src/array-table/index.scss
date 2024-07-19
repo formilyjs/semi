@@ -1,6 +1,6 @@
-@import '../__styles__/theme.scss';
+@import "../__styles__/theme.scss";
 
-$array-table-prefix-cls: '#{$semi-form-prefix}-array-table';
+$array-table-prefix-cls: "#{$semi-form-prefix}-array-table";
 
 .#{$array-table-prefix-cls} {
   .#{$array-table-prefix-cls}-pagination {
@@ -15,6 +15,8 @@ $array-table-prefix-cls: '#{$semi-form-prefix}-array-table';
   }
 
   .#{$semi-prefix}-table {
+    overflow: hidden;
+
     td {
       visibility: visible;
 

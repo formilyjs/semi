@@ -7,9 +7,12 @@ import {
   RecursionField,
 } from "@formily/react";
 import cls from "classnames";
-import { SortableContainer, SortableElement } from "react-sortable-hoc";
 import { ISchema } from "@formily/json-schema";
-import { usePrefixCls } from "../__builtins__";
+import {
+  usePrefixCls,
+  SortableContainer,
+  SortableElement,
+} from "../__builtins__";
 import { ArrayBase, ArrayBaseMixins } from "../array-base";
 import "./index.scss";
 
@@ -73,9 +76,8 @@ export const ArrayItems: ComposedArrayItems = observer((props) => {
         className={cls(prefixCls, props.className)}
       >
         <SortableList
-          useDragHandle
-          lockAxis="y"
-          helperClass={`${prefixCls}-sort-helper`}
+          list={dataSource.slice()}
+          className={`${prefixCls}-sort-helper`}
           onSortEnd={({ oldIndex, newIndex }) => {
             field.move(oldIndex, newIndex);
           }}
@@ -86,7 +88,7 @@ export const ArrayItems: ComposedArrayItems = observer((props) => {
               : schema.items;
             return (
               <ArrayBase.Item key={index} index={index} record={item}>
-                <SortableItem key={`item-${index}`} index={index}>
+                <SortableItem lockAxis="y" index={index}>
                   <div className={`${prefixCls}-item-inner`}>
                     <RecursionField schema={items as any} name={index} />
                   </div>

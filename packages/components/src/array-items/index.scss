@@ -1,6 +1,6 @@
 @import "../__styles__/theme.scss";
 
-$semi-items-prefix-cls: "#{$semi-form-prefix}formily-array-items";
+$semi-items-prefix-cls: "#{$semi-form-prefix}-formily-array-items";
 
 .#{$semi-items-prefix-cls}-item-inner {
   visibility: visible;
