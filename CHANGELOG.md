@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.2(2024-07-19)
+
+### :bug: Bug Fixes
+
+1. [fix(registry): fix registry](https://github.com/formilyjs/semi/commit/1af2412) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
+## v1.0.1(2024-07-19)
+
+### :bug: Bug Fixes
+
+1. [fix(array-x): upgrade sortable related function & fix array-items](https://github.com/formilyjs/semi/commit/cdd93a5) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.1-beta.18(2024-06-12)
 
 ### No Change Log
