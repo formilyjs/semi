@@ -9,7 +9,13 @@ import {
   IconChevronUp,
 } from "@douyinfe/semi-icons";
 import { IconProps as SemiIconProps } from "@douyinfe/semi-ui/lib/es/icons";
-import { useField, useFieldSchema, Schema, JSXComponent } from "@formily/react";
+import {
+  useField,
+  useFieldSchema,
+  Schema,
+  JSXComponent,
+  ExpressionScope,
+} from "@formily/react";
 import { ArrayField } from "@formily/core";
 import { isValid } from "@formily/shared";
 import cls from "classnames";
@@ -106,7 +112,11 @@ export const ArrayBase: ComposedArrayBase = (props) => {
 };
 
 ArrayBase.Item = ({ children, ...props }: any) => (
-  <ItemContext.Provider value={props}>{children}</ItemContext.Provider>
+  <ItemContext.Provider value={props}>
+    <ExpressionScope value={{ $record: props.record, $index: props.index }}>
+      {children}
+    </ExpressionScope>
+  </ItemContext.Provider>
 );
 
 const SortHandle = SortableHandle((props: any) => {

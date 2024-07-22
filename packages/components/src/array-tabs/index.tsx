@@ -14,6 +14,7 @@ import { IconPlus } from "@douyinfe/semi-icons";
 
 import "./index.scss";
 import { usePrefixCls } from "../__builtins__";
+import ArrayBase from "../array-base";
 
 interface IFeedbackBadgeProps {
   index: number;
@@ -82,7 +83,7 @@ export const ArrayTabs: React.FC<TabsProps> = observer((props) => {
       }
       onTabClose={(key) => onEdit(key, "remove")}
     >
-      {dataSource?.map((_, index) => {
+      {dataSource?.map((data, index) => {
         const items = Array.isArray(schema.items)
           ? schema.items[index]
           : (schema.items as any);
@@ -92,9 +93,15 @@ export const ArrayTabs: React.FC<TabsProps> = observer((props) => {
             key={key}
             itemKey={key}
             closable={index !== 0 && field.pattern === "editable"}
-            tab={<FeedbackBadge index={index} />}
+            tab={
+              <ArrayBase.Item key={`${key}-item`} index={index} record={data}>
+                <FeedbackBadge index={index} />
+              </ArrayBase.Item>
+            }
           >
-            <RecursionField schema={items} name={index} />
+            <ArrayBase.Item key={index} index={index} record={data}>
+              <RecursionField schema={items} name={index} />
+            </ArrayBase.Item>
           </TabPane>
         );
       })}
