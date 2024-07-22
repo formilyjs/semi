@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.3(2024-07-22)
+
+### :bug: Bug Fixes
+
+1. [fix(array-tabs): add exp scope to array-tabs](https://github.com/formilyjs/semi/commit/de28987) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.2(2024-07-19)
 
 ### :bug: Bug Fixes
