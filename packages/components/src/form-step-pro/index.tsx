@@ -10,18 +10,20 @@ import {
 import { VoidField } from "@formily/core";
 import { Steps, Button, Space } from "@douyinfe/semi-ui";
 import { Schema, SchemaKey } from "@formily/json-schema";
-import { FormPath } from '@formily/shared';
+import { FormPath } from "@formily/shared";
 import type { ButtonProps } from "@douyinfe/semi-ui/lib/es/button";
-import type { BasicStepsProps } from "@douyinfe/semi-ui/lib/es/steps";
+import type { StepsProps } from "@douyinfe/semi-ui/lib/es/steps";
 import type { StepProps } from "@douyinfe/semi-ui/lib/es/steps";
 import cls from "classnames";
 import { usePrefixCls } from "../__builtins__";
 import { FormStep, IFormStep } from "../form-step";
 
-export interface IFormStepProProps extends BasicStepsProps {
+interface IStepProProps {
   formStep?: IFormStep;
   onSubmit?: (value?: any) => void;
 }
+
+export type IFormStepProProps = IStepProProps & StepsProps;
 
 export interface IFormStepProContext {
   props: Pick<IFormStepProProps, "formStep" | "onSubmit">;
@@ -160,7 +162,7 @@ const NextWithSubmit: React.FC<
       {...restProps}
       onClick={() => {
         formStepCtx?.props.formStep?.submit((values) => {
-          const target = {}
+          const target = {};
           picks.forEach((pickPath) => {
             const parser = FormPath.parse(pickPath);
             parser.setIn(target, parser.getIn(values));
