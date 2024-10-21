@@ -2,8 +2,7 @@ import React, { Fragment } from "react";
 import { action, model, markRaw } from "@formily/reactive";
 import { Steps } from "@douyinfe/semi-ui";
 import cls from "classnames";
-import { BasicStepsProps } from "@douyinfe/semi-ui/lib/es/steps";
-import { StepProps } from "@douyinfe/semi-ui/lib/es/steps";
+import { StepsProps, StepProps } from "@douyinfe/semi-ui/lib/es/steps";
 import { Form, VoidField } from "@formily/core";
 import {
   connect,
@@ -27,9 +26,11 @@ export interface IFormStep {
   back(): void;
 }
 
-export interface IFormStepProps extends BasicStepsProps {
+interface IFormSteps {
   formStep?: IFormStep;
 }
+
+export type IFormStepProps = IFormSteps & StepsProps;
 
 type ComposedFormTab = React.FC<IFormStepProps> & {
   StepPane?: React.FC<StepProps>;
