@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:color";
 @import './color/colors';
 $theme: default;
 
@@ -593,7 +594,7 @@ $table-row-hover-bg: $background-color-light;
 $table-selected-row-color: inherit;
 $table-selected-row-bg: $primary-1;
 $table-body-selected-sort-bg: $table-selected-row-bg;
-$table-selected-row-hover-bg: darken($table-selected-row-bg, 2%);
+$table-selected-row-hover-bg: color.scale($table-selected-row-bg, $lightness: -2%);
 $table-expanded-row-bg: #fbfbfb;
 $table-padding-vertical: 16px;
 $table-padding-horizontal: 16px;
@@ -611,9 +612,9 @@ $table-font-size-md: $table-font-size;
 $table-font-size-sm: $table-font-size;
 // Sorter
 // Legacy:table-header-sort-active-bg` is used for hover not real active
-$table-header-sort-active-bg: darken($table-header-bg, 3%);
+$table-header-sort-active-bg: color.scale($table-header-bg, $lightness: -3%);
 // Filter
-$table-header-filter-active-bg: darken($table-header-sort-active-bg, 5%);
+$table-header-filter-active-bg: color.scale($table-header-sort-active-bg, $lightness: -5%);
 $table-filter-btns-bg: inherit;
 $table-filter-dropdown-bg: $component-background;
 $table-expand-icon-bg: $component-background;
@@ -796,7 +797,7 @@ $pagination-font-weight-active: 500;
 $pagination-item-bg-active: $component-background;
 $pagination-item-link-bg: $component-background;
 $pagination-item-disabled-color-active: $white;
-$pagination-item-disabled-bg-active: darken($disabled-bg, 10%);
+$pagination-item-disabled-bg-active: color.scale($disabled-bg, $lightness: -10%);
 $pagination-item-input-bg: $component-background;
 $pagination-mini-options-size-changer-top: 0px;
 
