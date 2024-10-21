@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.4-beta.0(2024-10-21)
+
+### :bug: Bug Fixes
+
+1. [fix(style/theme.scss): darken -> color.scale](https://github.com/formilyjs/semi/commit/63ef9e2) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
 ## v1.0.3(2024-07-22)
 
 ### :bug: Bug Fixes
