@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.4-beta.1(2025-03-17)
+
+### :tada: Enhancements
+
+1. [feat: checkboxgroup 支持复杂 options 结构](https://github.com/formilyjs/semi/commit/c828ae0) :point_right: ( [prgrmr](https://github.com/prgrmr) )
+
+### :bug: Bug Fixes
+
+1. [fix: steps props type](https://github.com/formilyjs/semi/commit/397f223) :point_right: ( [hexiaoliang](https://github.com/hexiaoliang) )
+
 ## v1.0.4-beta.0(2024-10-21)
 
 ### :bug: Bug Fixes
